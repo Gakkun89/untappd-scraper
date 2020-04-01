@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'nokogiri'
+require 'json'
 
 results_hash = {}
 html_file = 'brewDog.html'
@@ -18,5 +19,14 @@ doc.search('.beer-item').each_with_index do |beer_item, i|
     image: beer_item.search('img').attr('src').value.split('/')[-1]
   }
 end
+beers = []
 
-p results_hash
+results_hash.each do |beer|
+  beers << beer
+end
+
+beers_json = beers.to_json
+
+File.open('beers.json', 'w') do |f|
+  f.write(beers_json)
+end
