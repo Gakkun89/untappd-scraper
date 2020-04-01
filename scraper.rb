@@ -12,10 +12,10 @@ doc.search('.beer-item').each_with_index do |beer_item, i|
     brewery: 'Brewdog',
     style: beer_item.search('.style').text,
     abv: 'TBD',
-    desc: 'tbd',
+    desc: beer_item.search('.desc')[1].text.gsub('Read Less', ''),
     ibu: 'tbd',
     rating: '',
-    image: beer_item.search('img').attr('src').value.split("/")[2]
+    image: beer_item.search('img').attr('src').value.split('/')[2]
   }
 end
 
