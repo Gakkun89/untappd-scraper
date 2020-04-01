@@ -15,7 +15,7 @@ doc.search('.beer-item').each_with_index do |beer_item, i|
     desc: beer_item.search('.desc')[1].text.gsub('Read Less', ''),
     ibu: beer_item.search('.ibu').text.gsub(/\n/, '').strip,
     rating: beer_item.search('.num').text.gsub(/[()]/, ''),
-    image: beer_item.search('img').attr('src').value.split('/')[2]
+    image: beer_item.search('img').attr('src').value.split('/')[-1]
   }
 end
 
