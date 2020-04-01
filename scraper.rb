@@ -19,13 +19,7 @@ doc.search('.beer-item').each_with_index do |beer_item, i|
     image: beer_item.search('img').attr('src').value.split('/')[-1]
   }
 end
-beers = []
-
-results_hash.each do |beer|
-  beers << beer
-end
-
-beers_json = beers.to_json
+beers_json = JSON.pretty_generate(results_hash)
 
 File.open('beers.json', 'w') do |f|
   f.write(beers_json)
