@@ -8,7 +8,7 @@ html_file = 'brewDog.html'
 doc = Nokogiri::HTML(open(html_file))
 doc.search('.beer-item').each_with_index do |beer_item, i|
   results_hash[i] = {
-    name: 'TBD',
+    name: beer_item.search('.name a').text,
     brewery: 'Brewdog',
     abv: 'TBD',
     desc: 'tbd',
