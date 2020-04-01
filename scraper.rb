@@ -10,6 +10,7 @@ doc.search('.beer-item').each_with_index do |beer_item, i|
   results_hash[i] = {
     name: beer_item.search('.name a').text,
     brewery: 'Brewdog',
+    style: beer_item.search('.style').text,
     abv: 'TBD',
     desc: 'tbd',
     ibu: 'tbd',
