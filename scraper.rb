@@ -11,7 +11,7 @@ doc.search('.beer-item').each_with_index do |beer_item, i|
     name: beer_item.search('.name a').text,
     brewery: 'Brewdog',
     style: beer_item.search('.style').text,
-    abv: 'TBD',
+    abv: beer_item.search('.abv').text.gsub(/\n/, '').strip,
     desc: beer_item.search('.desc')[1].text.gsub('Read Less', ''),
     ibu: 'tbd',
     rating: '',
