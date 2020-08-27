@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untappd Brewery Search | Untappd</title>
+<meta property="og:site_name" content="Untappd" />
+
+<meta name="description" content="Looking for something on Untappd? Search to find any beer, brewery or venue on Untappd." />
+<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+<meta name="referrer" content="origin-when-crossorigin">
+
+<meta name="author" content="The Untappd Team" />
+<meta name="Copyright" content="Copyright Untappd 2020. All Rights Reserved." />
+<meta name="DC.title" content="Untappd" />
+<meta name="DC.subject" content="Looking for something on Untappd? Search to find any beer, brewery or venue on Untappd." />
+<meta name="DC.creator" content="The Untappd Team" />
+<meta name="google-site-verification" content="EnR7QavTgiLCzZCCOv_OARCHsHhFwkwnJdG0Sti9Amg" />
+<meta name="bitly-verification" content="b3080898518a" />
+
+<link rel="apple-touch-icon" sizes="144x144" href="https://untappd.akamaized.net/assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="https://untappd.akamaized.net/assets/favicon-32x32-v2.png" sizes="32x32">
+<link rel="icon" type="image/png" href="https://untappd.akamaized.net/assets/favicon-16x16-v2.png" sizes="16x16">
+<link rel="manifest" href="https://untappd.akamaized.net/assets/manifest.json">
+<link rel="mask-icon" href="https://untappd.akamaized.net/assets/safari-pinned-tab.svg" color="#5bbad5">
+<link id="canonical" rel="canonical" href="https://untappd.com/search"> <link rel="stylesheet" href="https://untappd.akamaized.net/assets/css/master.min.css?v=4.4.1" />
+<link rel="stylesheet" href="https://untappd.akamaized.net/assets/v3/css/style.css?v=4.4.1" />
+<link rel="stylesheet" href="https://untappd.akamaized.net/assets/design-system/css/styles.css?v=4.4.1" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+<script src="https://untappd.akamaized.net/assets/v3/js/common/min/site_common_min.js?v=2.7.3"></script>
+<!--[if lte IE 7]><script src="https://untappd.akamaized.net/assets/js/ie6.js?v=2.7.3"></script><![endif]-->
+<link rel="stylesheet" href="https://untappd.akamaized.net/assets/css/facybox.min.css?v=4.4.1" />
+<link rel="stylesheet" href="https://untappd.akamaized.net/assets/css/jquery.notifyBar.min.css?v=4.4.1" />
+<link rel="stylesheet" href="https://untappd.akamaized.net/assets/css/tipsy.min.css?v=4.4.1" type="text/css" media="screen" title="no title" charset="utf-8">
+<script type="text/javascript" language="Javascript">
+			$(document).ready(function(){
+				$(".tip").tipsy({fade: true});
+				$('.badge_hint').tipsy({gravity: 's', fade: true});
+				$('.disabled').tipsy({gravity: 'n', fade: true});
+
+				refreshTime(".timezoner", "D MMM YY", true);
+
+				$(".tab").click(function(){
+					$(".tab-area li").removeClass('active');
+					$(this).parent().addClass('active');
+					$(".list").hide();
+					$($(this).attr("href")).show();
+					return false;
+				});
+			});
+
+			</script>
+
+<script type="text/javascript" language="Javascript">
+	onChangeInterval = "";
+	if(!(window.console && console.log)) {
+	  console = {
+	    log: function(){},
+	    debug: function(){},
+	    info: function(){},
+	    warn: function(){},
+	    error: function(){}
+	  };
+	}
+	</script>
+
+<script type="text/javascript" src="https://untappd.akamaized.net/assets/libs/js/algoliasearch.min.js?v2.7.3"></script>
+<script type="text/javascript" src="https://untappd.akamaized.net/assets/libs/js/autocomplete.min.js?v2.7.3"></script>
+<script type="text/javascript" src="https://untappd.akamaized.net/assets/libs/js/lodash.min.js?v2.7.3"></script>
+<script type="text/javascript" src="https://untappd.akamaized.net/assets/js/global/autosearch_tracking.min.js?v2.7.3"></script>
+<script>
+     !function(e,a,t,n,s,i,c){e.AlgoliaAnalyticsObject=s,e.aa=e.aa||function(){(e.aa.queue=e.aa.queue||[]).push(arguments)},i=a.createElement(t),c=a.getElementsByTagName(t)[0],i.async=1,i.src="https://cdn.jsdelivr.net/npm/search-insights@0.0.14",c.parentNode.insertBefore(i,c)}(window,document,"script",0,"aa");
+
+    // Initialize library
+    aa('init', {
+      applicationID: '9WBO4RQ3HO',
+      apiKey: '1d347324d67ec472bb7132c66aead485',
+    })
+  </script>
+<script type="text/javascript" id="AdvallyRules" src="https://cdn.adligature.com/untappd/prod/rules.js"></script>
+</head>
+<style type="text/css">
+	.hidden {display: none;}
+	.main {
+       margin-top: 0px !important;
+   }
+</style>
+<script src="https://unpkg.com/feather-icons"></script>
+<body onunload="">
+<div id="mobile_nav_user">
+<div class="nav_user_header">
+<img src="https://gravatar.com/avatar/21e775b2d03ae0793e249f59ad84d07d?size=100&d=https%3A%2F%2Funtappd.akamaized.net%2Fsite%2Fassets%2Fimages%2Fdefault_avatar_v3_gravatar.jpg%3Fv%3D2">
+<p>Mike Warren</p>
+</div>
+<ul>
+<li><a class="track-click" data-track="mobile_menu" data-href=":home" href="/home">Recent Activity</a></li>
+<li><a class="track-click" data-track="mobile_menu" data-href=":user/profile" href="/user/Gakkun89">My Profile</a></li>
+<li><a class="track-click" data-track="mobile_menu" data-href=":stats" href="/stats">Personal Stats</a></li>
+<li><a class="track-click" data-track="mobile_menu" data-href=":user/beerhistory" href="/user/Gakkun89/beers">Beer History</a></li>
+<li><a href="#">My Events</a></li>
+<li><a class="track-click" data-track="mobile_menu" data-href=":user/friends" href="/user/Gakkun89/friends">Friends</a></li>
+<li><a class="track-click" data-track="mobile_menu" data-href=":user/lists" href="/user/Gakkun89/lists/">Lists</a></li>
+<li><a class="track-click" data-track="mobile_menu" data-href=":user/badges" href="/user/Gakkun89/badges">Badges</a></li>
+<li><a class="track-click" data-track="mobile_menu" data-href=":user/venues" href="/user/Gakkun89/venues">Venues</a></li>
+<li><a class="track-click" data-track="mobile_menu" data-href=":account/settings" href="/account/settings">Account Settings</a></li>
+<li><a class="track-click" data-track="mobile_menu" data-href=":logout" href="/logout">Logout</a></li>
+</ul>
+</div>
+<div id="mobile_nav_site">
+<form class="search_box" method="get" action="/search">
+<input type="text" class="track-focus search-input-desktop" autocomplete="off" data-track="desktop_search" placeholder="Find a beer, brewery or bar..." name="q" />
+<input type="submit" value="Submit the form!" style="position: absolute; top: 0; left: 0; z-index: 0; width: 1px; height: 1px; visibility: hidden;" />
+<div class="autocomplete">
+</div>
+</form>
+<ul>
+<li><a class="track-click" data-track="mobile_menu" data-href=":thepub" href="/thepub">The Pub</a></li>
+<li><a class="track-click" data-track="mobile_menu" data-href=":beer/top_rated" href="/beer/top_rated">Top Rated</a></li>
+<li><a class="track-click" data-track="mobile_menu" data-href=":supporter" href="/supporter">Supporter</a></li>
+<li><a class="track-click" data-track="mobile_menu" data-href=":external/help" target="_blank" href="http://help.untappd.com">Help</a></li>
+<li><a class="track-click" data-track="mobile_menu" data-href=":sidebar/logout" href="/logout">Logout</a></li>
+</ul>
+</div>
+<header>
+<div class="inner">
+<a class="track-click logo" data-track="desktop_header" data-href=":root" href="/">
+<img src="https://untappd.akamaized.net/assets/v3/images/untappd-logo-2@2x.png" class="" alt="Untappd" />
+</a>
+<div class="user_nav_btn">
+<img src="https://gravatar.com/avatar/21e775b2d03ae0793e249f59ad84d07d?size=100&d=https%3A%2F%2Funtappd.akamaized.net%2Fsite%2Fassets%2Fimages%2Fdefault_avatar_v3_gravatar.jpg%3Fv%3D2">
+<div class="nav_user_desktop">
+<ul>
+<li><a class="track-click" data-track="desktop_menu" data-href=":home" href="/home">Recent Activity</a></li>
+<li><a class="track-click" data-track="desktop_menu" data-href=":user/profile" href="/user/Gakkun89">My Profile</a></li>
+<li><a class="track-click" data-track="desktop_menu" data-href=":stats" href="/stats">Personal Stats</a></li>
+<li><a class="track-click" data-track="desktop_menu" data-href=":user/beerhistory" href="/user/Gakkun89/beers">Beer History</a></li>
+<li><a class="track-click" data-track="desktop_menu" data-href=":user/friends" href="/user/Gakkun89/friends">Friends</a></li>
+<li><a class="track-click" data-track="desktop_menu" data-href=":user/lists" href="/user/Gakkun89/lists/">Lists</a></li>
+<li><a class="track-click" data-track="desktop_menu" data-href=":user/badges" href="/user/Gakkun89/badges">Badges</a></li>
+<li><a class="track-click" data-track="desktop_menu" data-href=":user/venues" href="/user/Gakkun89/venues">Venues</a></li>
+<li><a class="track-click" data-track="desktop_menu" data-href=":account/settings" href="/account/settings">Account Settings</a></li>
+<li><a class="track-click" data-track="desktop_menu" data-href=":logout" href="/logout">Logout</a></li>
+</ul>
+</div>
+</div>
+<div onclick="trackMobileEvent('menu');" class="mobile_menu_btn">Menu</div>
+<div id="nav_site">
+<ul>
+<li><a class="track-click" data-track="desktop_menu" data-href=":thepub" href="/thepub">The Pub</a></li>
+<li><a class="track-click" data-track="desktop_menu" data-href=":beer/top_rated" href="/beer/top_rated">Top Rated</a></li>
+<li><a class="track-click" data-track="desktop_menu" data-href=":supporter" href="/supporter">Supporter</a></li>
+<li><a class="track-click" data-track="desktop_menu" data-href=":external/help" target="_blank" href="http://help.untappd.com">Help</a></li>
+</ul>
+<form class="search_box" method="get" action="/search">
+<input type="text" class="track-focus search-input-desktop" autocomplete="off" data-track="desktop_search" placeholder="Find a beer, brewery or bar..." name="q" />
+<input type="submit" value="Submit the form!" style="position: absolute; top: 0; left: 0; z-index: 0; width: 1px; height: 1px; visibility: hidden;" />
+<div class="autocomplete">
+</div>
+</form>
+</div>
+</div>
+</header>
+<style type="text/css">
+    .ac-selected {
+        background-color: #f8f8f8;
+    }
+</style>
+<div class="nav_open_overlay"></div>
+<div id="slide">
+<div class="notice_banner">
+<p>
+Your email address has not been verified. Please <a style="color: #fff; text-decoration: underline;" href="/account/start_email_validation">click here to verify</a> your registered email.
+</p>
+</div>
+<script>
+$(document).ready(() => {
+	$(".hide-notice-banner").on("click", function(e) {
+		e.preventDefault();
+		$(this).parent().parent().slideUp();
+		$.post(`/account/hide_notice_wildcard`, {cookie: $(this).attr('data-cookie-name')}, (data) => {
+			console.log(data);
+		}).fail((err) => {
+			console.error(err);
+		})
+	})
+
+	$(".hide-notice-simple").on("click", function(e) {
+		e.preventDefault();
+		$(this).parent().parent().slideUp();
+	})
+
+	feather.replace()
+})
+</script><div class="cont search-page">
+<div class="main">
+<div class="box">
+<div class="results content">
+<div class="search">
+<form method="/search" method="get">
+<input type="text" id="search-term" name="q" value="japan"><span class="button yellow">Search<input type="submit"></span>
+<input type="hidden" id="page-type" name="type" value="brewery" />
+<input type="hidden" id="sort-type" name="sort" value="all" />
+</form>
+</div>
+<div class="filter">
+<a href="#" data-filter="beer" class="section-toggle track-click" data-track="search" data-type="brewery" data-href=":beer_toggle">
+Beer
+</a><a data-filter="brewery" class="active section-toggle track-click" data-track="search" data-type="brewery" data-href=":brewery_toggle" href="#">
+Brewery
+</a><a data-filter="venues" class="section-toggle track-click" data-track="search" data-type="beer" data-href=":venue_toggle" href="#">
+Venue
+</a>
+</div>
+<div class="result-list beer-list">
+<div class="results-list-top">
+<p class="total"><strong>870 brewery</strong> results for <strong>"japan"</strong></p>
+<div class="sort">
+<p>
+Sort by:
+<select id="sort_picker" data-query="japan" data-type="brewery">
+<option value="all" SELECTED="TRUE">Popularity</option>
+<option value="brewery_name_asc">Brewery Name (Asc)</option>
+<option value="brewery_name_desc">Brewery Name (Desc)</option>
+</select>
+</p>
+</div>
+</div>
+<div class="results-container">
+<div class="beer-item">
+<a class="label" href="/brewery/4779">
+<img src="https://untappd.akamaized.net/site/brewery_logos/brewery-4779_57d58.jpeg">
+</a><div class="beer-details">
+<p class="name"><a href="/SUSA_NY">Sapporo Breweries</a></p>
+<p class="style">Japan</p>
+<p class="style">Macro Brewery</p>
+</div>
+<div class="details brewery">
+<p class="abv">
+<a href="/w/sapporo-breweries/4779/beer">
+236 Beers </a>
+</p><p class="ibu">
+432,052 Ratings </p>
+<div class="rating">
+<div class="caps" data-rating="3.152">
+<div class="cap cap-100"></div>
+<div class="cap cap-100"></div>
+<div class="cap cap-100"></div>
+<div class="cap cap-20"></div>
+<div class="cap"></div>
+</div> <span class="num">(3.15)</span>
+</div>
+</div>
+</div>
+<div class="beer-item">
+<a class="label" href="/brewery/741">
+<img src="https://untappd.akamaized.net/site/brewery_logos/brewery-741_22fbb.jpeg">
+</a><div class="beer-details">
+<p class="name"><a href="/w/kirin-brewery-company/741">Kirin Brewery Company</a></p>
+<p class="style">Japan</p>
+<p class="style">Macro Brewery</p>
+</div>
+<div class="details brewery">
+<p class="abv">
+<a href="/w/kirin-brewery-company/741/beer">
+118 Beers </a>
+</p><p class="ibu">
+383,449 Ratings </p>
+<div class="rating">
+<div class="caps" data-rating="3.083">
+<div class="cap cap-100"></div>
+<div class="cap cap-100"></div>
+<div class="cap cap-100"></div>
+<div class="cap cap-10"></div>
+<div class="cap"></div>
+</div> <span class="num">(3.08)</span>
+</div>
+</div>
+</div>
+<div class="beer-item">
+<a class="label" href="/brewery/1713">
+<img src="https://untappd.akamaized.net/site/brewery_logos/brewery-KiuchiBrewery_1713.jpeg">
+</a><div class="beer-details">
+<p class="name"><a href="/HitachinoNestBeer">Kiuchi Brewery</a></p>
+<p class="style">Japan</p>
+<p class="style">Micro Brewery</p>
+</div>
+<div class="details brewery">
+<p class="abv">
+<a href="/w/kiuchi-brewery/1713/beer">
+240 Beers </a>
+</p><p class="ibu">
+381,313 Ratings </p>
+<div class="rating">
+<div class="caps" data-rating="3.57">
+<div class="cap cap-100"></div>
+<div class="cap cap-100"></div>
+<div class="cap cap-100"></div>
+<div class="cap cap-60"></div>
+<div class="cap"></div>
+</div> <span class="num">(3.57)</span>
+</div>
+</div>
+</div>
+<div class="beer-item">
+<a class="label" href="/brewery/50">
+<img src="https://untappd.akamaized.net/site/brewery_logos/brewery-50_09b01.jpeg">
+</a><div class="beer-details">
+<p class="name"><a href="/w/asahi-breweries/50">Asahi Breweries</a></p>
+<p class="style">Japan</p>
+<p class="style">Macro Brewery</p>
+</div>
+<div class="details brewery">
+<p class="abv">
+<a href="/w/asahi-breweries/50/beer">
+194 Beers </a>
+</p><p class="ibu">
+315,567 Ratings </p>
+<div class="rating">
+<div class="caps" data-rating="3.08">
+<div class="cap cap-100"></div>
+<div class="cap cap-100"></div>
+<div class="cap cap-100"></div>
+<div class="cap cap-10"></div>
+<div class="cap"></div>
+</div> <span class="num">(3.08)</span>
+</div>
+</div>
+</div>
+<div class="beer-item">
+<a class="label" href="/brewery/5697">
+<img src="https://untappd.akamaized.net/site/brewery_logos/brewery-BairdBrewingCompanyFishmarketTaproom_5697.jpeg">
+</a><div class="beer-details">
+<p class="name"><a href="/bairdbeer">Baird Brewing Company</a></p>
+<p class="style">Japan</p>
+<p class="style">Micro Brewery</p>
+</div>
+<div class="details brewery">
+<p class="abv">
+<a href="/w/baird-brewing-company/5697/beer">
+401 Beers </a>
+</p><p class="ibu">
+112,853 Ratings </p>
+<div class="rating">
+<div class="caps" data-rating="3.504">
+<div class="cap cap-100"></div>
+<div class="cap cap-100"></div>
+<div class="cap cap-100"></div>
+<div class="cap cap-50"></div>
+<div class="cap"></div>
+</div> <span class="num">(3.5)</span>
+</div>
+</div>
+</div>
+<div class="beer-item">
+<a class="label" href="/brewery/5859">
+<img src="https://untappd.akamaized.net/site/brewery_logos/brewery-YoHoBrewingCompany_5859.jpeg">
+</a><div class="beer-details">
+<p class="name"><a href="/w/yo-ho-brewing-company/5859">Yo-Ho Brewing Company</a></p>
+<p class="style">Japan</p>
+<p class="style">Micro Brewery</p>
+</div>
+<div class="details brewery">
+<p class="abv">
+<a href="/w/yoho-brewing-company/5859/beer">
+132 Beers </a>
+</p><p class="ibu">
+99,005 Ratings </p>
+<div class="rating">
+<div class="caps" data-rating="3.519">
+<div class="cap cap-100"></div>
+<div class="cap cap-100"></div>
+<div class="cap cap-100"></div>
+<div class="cap cap-50"></div>
+<div class="cap"></div>
+</div> <span class="num">(3.52)</span>
+</div>
+</div>
+</div>
+<div class="beer-item">
+<a class="label" href="/brewery/1893">
+<img src="https://untappd.akamaized.net/site/brewery_logos/brewery-1893_1cc81.jpeg">
+</a><div class="beer-details">
+<p class="name"><a href="/w/suntory-beer-limited/1893">Suntory Beer Limited</a></p>
+<p class="style">Japan</p>
+<p class="style">Macro Brewery</p>
+</div>
+<div class="details brewery">
+<p class="abv">
+<a href="/w/suntory-beer-limited/1893/beer">
+158 Beers </a>
+</p><p class="ibu">
+66,438 Ratings </p>
+<div class="rating">
+<div class="caps" data-rating="2.993">
+<div class="cap cap-100"></div>
+<div class="cap cap-100"></div>
+<div class="cap cap-100"></div>
+<div class="cap"></div>
+<div class="cap"></div>
+</div> <span class="num">(2.99)</span>
+</div>
+</div>
+</div>
+<div class="beer-item">
+<a class="label" href="/brewery/8729">
+<img src="https://untappd.akamaized.net/site/brewery_logos/brewery-KyodoShojiKoedoBrewery_8729.jpeg">
+</a><div class="beer-details">
+<p class="name"><a href="/w/kyodo-shoji-coedo-brewery/8729">Kyodo Shoji Coedo Brewery</a></p>
+<p class="style">Japan</p>
+<p class="style">Micro Brewery</p>
+</div>
+<div class="details brewery">
+<p class="abv">
+<a href="/w/kyodo-shoji-coedo-brewery/8729/beer">
+90 Beers  </a>
+</p><p class="ibu">
+56,644 Ratings </p>
+<div class="rating">
+<div class="caps" data-rating="3.56">
+<div class="cap cap-100"></div>
+<div class="cap cap-100"></div>
+<div class="cap cap-100"></div>
+<div class="cap cap-60"></div>
+<div class="cap"></div>
+</div> <span class="num">(3.56)</span>
+</div>
+</div>
+</div>
+<div class="beer-item">
+<a class="label" href="/brewery/5704">
+<img src="https://untappd.akamaized.net/site/brewery_logos/brewery-TamamuraHontenCoLtd_5704.jpeg">
+</a><div class="beer-details">
+<p class="name"><a href="/w/tamamura-honten-co/5704">Tamamura Honten Co.</a></p>
+<p class="style">Japan</p>
+<p class="style">Micro Brewery</p>
+</div>
+<div class="details brewery">
+<p class="abv">
+<a href="/w/tamamura-honten-co/5704/beer">
+70 Beers </a>
+</p><p class="ibu">
+49,112 Ratings </p>
+<div class="rating">
+<div class="caps" data-rating="3.784">
+<div class="cap cap-100"></div>
+<div class="cap cap-100"></div>
+<div class="cap cap-100"></div>
+<div class="cap cap-80"></div>
+<div class="cap"></div>
+</div> <span class="num">(3.78)</span>
+</div>
+</div>
+</div>
+<div class="beer-item">
+<a class="label" href="/brewery/1516">
+<img src="https://untappd.akamaized.net/site/brewery_logos/brewery-1516_112db.jpeg">
+</a><div class="beer-details">
+<p class="name"><a href="/w/echigo-beer-co/1516">Echigo Beer Co.</a></p>
+<p class="style">Japan</p>
+<p class="style">Micro Brewery</p>
+</div>
+<div class="details brewery">
+<p class="abv">
+<a href="/w/echigo-beer-co/1516/beer">
+65 Beers </a>
+</p><p class="ibu">
+46,919 Ratings </p>
+<div class="rating">
+<div class="caps" data-rating="3.448">
+<div class="cap cap-100"></div>
+<div class="cap cap-100"></div>
+<div class="cap cap-100"></div>
+<div class="cap cap-40"></div>
+<div class="cap"></div>
+</div> <span class="num">(3.45)</span>
+</div>
+</div>
+</div>
+<div class="beer-item">
+<a class="label" href="/brewery/6919">
+<img src="https://untappd.akamaized.net/site/brewery_logos/brewery-6919_9fc1e.jpeg">
+</a><div class="beer-details">
+<p class="name"><a href="/w/orion-breweries-ltd/6919">Orion Breweries, Ltd.</a></p>
+<p class="style">Japan</p>
+<p class="style">Macro Brewery</p>
+</div>
+<div class="details brewery">
+<p class="abv">
+<a href="/w/orion-breweries-ltd/6919/beer">
+53 Beers </a>
+</p><p class="ibu">
+44,305 Ratings </p>
+<div class="rating">
+<div class="caps" data-rating="3.148">
+<div class="cap cap-100"></div>
+<div class="cap cap-100"></div>
+<div class="cap cap-100"></div>
+<div class="cap cap-10"></div>
+<div class="cap"></div>
+</div> <span class="num">(3.15)</span>
+</div>
+</div>
+</div>
+<div class="beer-item">
+<a class="label" href="/brewery/5862">
+<img src="https://untappd.akamaized.net/site/brewery_logos/brewery-IseKadoyaBreweryNikenjayamochiKadoyaHontenCo_5862.jpeg">
+</a><div class="beer-details">
+<p class="name"><a href="/IseKadoyaBrewery">Ise Kadoya Brewery</a></p>
+<p class="style">Japan</p>
+<p class="style">Micro Brewery</p>
+</div>
+<div class="details brewery">
+<p class="abv">
+<a href="/w/ise-kadoya-brewery/5862/beer">
+305 Beers </a>
+</p><p class="ibu">
+28,460 Ratings </p>
+<div class="rating">
+<div class="caps" data-rating="3.691">
+<div class="cap cap-100"></div>
+<div class="cap cap-100"></div>
+<div class="cap cap-100"></div>
+<div class="cap cap-70"></div>
+<div class="cap"></div>
+</div> <span class="num">(3.69)</span>
+</div>
+</div>
+</div>
+<div class="beer-item">
+<a class="label" href="/brewery/6448">
+<img src="https://untappd.akamaized.net/site/brewery_logos/brewery-6448_13241.jpeg">
+</a><div class="beer-details">
+<p class="name"><a href="/w/aji-beer-inc/6448">A.J.I. Beer Inc.</a></p>
+<p class="style">Japan</p>
+<p class="style">Micro Brewery</p>
+</div>
+<div class="details brewery">
+<p class="abv">
+<a href="/w/aji-beer-inc/6448/beer">
+179 Beers </a>
+</p><p class="ibu">
+27,262 Ratings </p>
+<div class="rating">
+<div class="caps" data-rating="3.69">
+<div class="cap cap-100"></div>
+<div class="cap cap-100"></div>
+<div class="cap cap-100"></div>
+<div class="cap cap-70"></div>
+<div class="cap"></div>
+</div> <span class="num">(3.69)</span>
+</div>
+</div>
+</div>
+<div class="beer-item">
+<a class="label" href="/brewery/15547">
+<img src="https://untappd.akamaized.net/site/brewery_logos/brewery-KizakuraCoLtd_15547.jpeg">
+</a><div class="beer-details">
+<p class="name"><a href="/w/kizakura-co/15547">Kizakura Co.</a></p>
+<p class="style">Japan</p>
+<p class="style">Micro Brewery</p>
+</div>
+<div class="details brewery">
+<p class="abv">
+<a href="/w/kizakura-co/15547/beer">
+56 Beers </a>
+</p><p class="ibu">
+24,114 Ratings </p>
+<div class="rating">
+<div class="caps" data-rating="3.281">
+<div class="cap cap-100"></div>
+<div class="cap cap-100"></div>
+<div class="cap cap-100"></div>
+<div class="cap cap-30"></div>
+<div class="cap"></div>
+</div> <span class="num">(3.28)</span>
+</div>
+</div>
+</div>
+<div class="beer-item">
+<a class="label" href="/brewery/32277">
+<img src="https://untappd.akamaized.net/site/brewery_logos/brewery-32277_334cb.jpeg">
+</a><div class="beer-details">
+<p class="name"><a href="/faryeastbrewing">Far Yeast Brewing Company</a></p>
+<p class="style">Japan</p>
+<p class="style">Regional Brewery</p>
+</div>
+<div class="details brewery">
+<p class="abv">
+<a href="/w/far-yeast-brewing-company/32277/beer">
+68 Beers </a>
+</p><p class="ibu">
+21,749 Ratings </p>
+<div class="rating">
+<div class="caps" data-rating="3.681">
+<div class="cap cap-100"></div>
+<div class="cap cap-100"></div>
+<div class="cap cap-100"></div>
+<div class="cap cap-70"></div>
+<div class="cap"></div>
+</div> <span class="num">(3.68)</span>
+</div>
+</div>
+</div>
+<div class="beer-item">
+<a class="label" href="/brewery/201936">
+<img src="https://untappd.akamaized.net/site/brewery_logos/brewery-201936_7ab96.jpeg">
+</a><div class="beer-details">
+<p class="name"><a href="/KyotoBrewing">Kyoto Brewing Company</a></p>
+<p class="style">Japan</p>
+<p class="style">Micro Brewery</p>
+</div>
+<div class="details brewery">
+<p class="abv">
+<a href="/w/kyoto-brewing-company/201936/beer">
+131 Beers </a>
+</p><p class="ibu">
+21,670 Ratings </p>
+<div class="rating">
+<div class="caps" data-rating="3.704">
+<div class="cap cap-100"></div>
+<div class="cap cap-100"></div>
+<div class="cap cap-100"></div>
+<div class="cap cap-70"></div>
+<div class="cap"></div>
+</div> <span class="num">(3.7)</span>
+</div>
+</div>
+</div>
+<div class="beer-item">
+<a class="label" href="/brewery/158050">
+<img src="https://untappd.akamaized.net/site/brewery_logos/brewery-158050_529a5.jpeg">
+</a><div class="beer-details">
+<p class="name"><a href="/w/ushitora-brewery/158050">Ushitora Brewery</a></p>
+<p class="style">Japan</p>
+<p class="style">Micro Brewery</p>
+</div>
+<div class="details brewery">
+<p class="abv">
+<a href="/w/ushitora-brewery/158050/beer">
+471 Beers </a>
+</p><p class="ibu">
+21,522 Ratings </p>
+<div class="rating">
+<div class="caps" data-rating="3.687">
+<div class="cap cap-100"></div>
+<div class="cap cap-100"></div>
+<div class="cap cap-100"></div>
+<div class="cap cap-70"></div>
+<div class="cap"></div>
+</div> <span class="num">(3.69)</span>
+</div>
+</div>
+</div>
+<div class="beer-item">
+<a class="label" href="/brewery/116775">
+<img src="https://untappd.akamaized.net/site/brewery_logos/brewery-116775_762a7.jpeg">
+</a><div class="beer-details">
+<p class="name"><a href="/w/y-market-brewing/116775">Y.Market Brewing</a></p>
+<p class="style">Japan</p>
+<p class="style">Micro Brewery</p>
+</div>
+<div class="details brewery">
+<p class="abv">
+<a href="/w/ymarket-brewing/116775/beer">
+266 Beers </a>
+</p><p class="ibu">
+19,943 Ratings </p>
+<div class="rating">
+<div class="caps" data-rating="3.712">
+<div class="cap cap-100"></div>
+<div class="cap cap-100"></div>
+<div class="cap cap-100"></div>
+<div class="cap cap-70"></div>
+<div class="cap"></div>
+</div> <span class="num">(3.71)</span>
+</div>
+</div>
+</div>
+<div class="beer-item">
+<a class="label" href="/brewery/144027">
+<img src="https://untappd.akamaized.net/site/brewery_logos/brewery-144027_00603.jpeg">
+</a><div class="beer-details">
+<p class="name"><a href="/w/spring-valley-brewery/144027">Spring Valley Brewery</a></p>
+<p class="style">Japan</p>
+<p class="style">Micro Brewery</p>
+</div>
+<div class="details brewery">
+<p class="abv">
+<a href="/w/spring-valley-brewery/144027/beer">
+151 Beers </a>
+</p><p class="ibu">
+16,930 Ratings </p>
+<div class="rating">
+<div class="caps" data-rating="3.477">
+<div class="cap cap-100"></div>
+<div class="cap cap-100"></div>
+<div class="cap cap-100"></div>
+<div class="cap cap-50"></div>
+<div class="cap"></div>
+</div> <span class="num">(3.48)</span>
+</div>
+</div>
+</div>
+<div class="beer-item">
+<a class="label" href="/brewery/5720">
+<img src="https://untappd.akamaized.net/site/brewery_logos/brewery-SanktGallenBrewery_5720.jpeg">
+</a><div class="beer-details">
+<p class="name"><a href="/w/sankt-gallen-brewery/5720">Sankt Gallen Brewery</a></p>
+<p class="style">Japan</p>
+<p class="style">Micro Brewery</p>
+</div>
+<div class="details brewery">
+<p class="abv">
+<a href="/w/sankt-gallen-brewery/5720/beer">
+117 Beers </a>
+</p><p class="ibu">
+14,940 Ratings </p>
+<div class="rating">
+<div class="caps" data-rating="3.542">
+<div class="cap cap-100"></div>
+<div class="cap cap-100"></div>
+<div class="cap cap-100"></div>
+<div class="cap cap-50"></div>
+<div class="cap"></div>
+</div> <span class="num">(3.54)</span>
+</div>
+</div>
+</div>
+<div class="beer-item">
+<a class="label" href="/brewery/233161">
+<img src="https://untappd.akamaized.net/site/brewery_logos/brewery-233161_aa4c0.jpeg">
+</a><div class="beer-details">
+<p class="name"><a href="/w/devilcraft-tokyo-brewery/233161">DevilCraft Tokyo Brewery</a></p>
+<p class="style">Japan</p>
+<p class="style">Micro Brewery</p>
+</div>
+<div class="details brewery">
+<p class="abv">
+<a href="/w/devilcraft-tokyo-brewery/233161/beer">
+301 Beers </a>
+</p><p class="ibu">
+14,837 Ratings </p>
+<div class="rating">
+ <div class="caps" data-rating="3.755">
+<div class="cap cap-100"></div>
+<div class="cap cap-100"></div>
+<div class="cap cap-100"></div>
+<div class="cap cap-80"></div>
+<div class="cap"></div>
+</div> <span class="num">(3.76)</span>
+</div>
+</div>
+</div>
+<div class="beer-item">
+<a class="label" href="/brewery/3398">
+<img src="https://untappd.akamaized.net/site/brewery_logos/brewery-3398_761e8.jpeg">
+</a><div class="beer-details">
+<p class="name"><a href="/w/ginga-kogen-beer-co/3398">Ginga Kogen Beer Co.</a></p>
+<p class="style">Japan</p>
+<p class="style">Contract Brewery</p>
+</div>
+<div class="details brewery">
+<p class="abv">
+<a href="/w/ginga-kogen-beer-co/3398/beer">
+2 Beers </a>
+</p><p class="ibu">
+13,840 Ratings </p>
+<div class="rating">
+<div class="caps" data-rating="3.46">
+<div class="cap cap-100"></div>
+<div class="cap cap-100"></div>
+<div class="cap cap-100"></div>
+<div class="cap cap-50"></div>
+<div class="cap"></div>
+</div> <span class="num">(3.46)</span>
+</div>
+</div>
+</div>
+<div class="beer-item">
+<a class="label" href="/brewery/12554">
+<img src="https://untappd.akamaized.net/site/brewery_logos/brewery-NoboribetsuCraftBeerFactoryWakasaimoHonpo_12554.jpeg">
+</a><div class="beer-details">
+<p class="name"><a href="/w/wakasaimo-honpo/12554">Wakasaimo Honpo</a></p>
+<p class="style">Japan</p>
+<p class="style">Micro Brewery</p>
+</div>
+<div class="details brewery">
+<p class="abv">
+<a href="/w/wakasaimo-honpo/12554/beer">
+180 Beers </a>
+</p><p class="ibu">
+13,576 Ratings </p>
+<div class="rating">
+<div class="caps" data-rating="3.755">
+<div class="cap cap-100"></div>
+<div class="cap cap-100"></div>
+<div class="cap cap-100"></div>
+<div class="cap cap-80"></div>
+<div class="cap"></div>
+</div> <span class="num">(3.76)</span>
+</div>
+</div>
+</div>
+<div class="beer-item">
+<a class="label" href="/brewery/14342">
+<img src="https://untappd.akamaized.net/site/brewery_logos/brewery-14342_faf6b.jpeg">
+</a><div class="beer-details">
+<p class="name"><a href="/w/sekinoichi-shuzo/14342">Sekinoichi Shuzo</a></p>
+<p class="style">Japan</p>
+<p class="style">Micro Brewery</p>
+</div>
+<div class="details brewery">
+<p class="abv">
+<a href="/w/sekinoichi-shuzo/14342/beer">
+175 Beers </a>
+</p><p class="ibu">
+11,057 Ratings </p>
+<div class="rating">
+<div class="caps" data-rating="3.541">
+<div class="cap cap-100"></div>
+<div class="cap cap-100"></div>
+<div class="cap cap-100"></div>
+<div class="cap cap-50"></div>
+<div class="cap"></div>
+</div> <span class="num">(3.54)</span>
+</div>
+</div>
+</div>
+<div class="beer-item">
+<a class="label" href="/brewery/10611">
+<img src="https://untappd.akamaized.net/site/brewery_logos/brewery-KumazawaBrewingCo_10611.jpeg">
+</a><div class="beer-details">
+<p class="name"><a href="/w/kumazawa-brewing-co/10611">Kumazawa Brewing Co.</a></p>
+<p class="style">Japan</p>
+<p class="style">Micro Brewery</p>
+</div>
+<div class="details brewery">
+<p class="abv">
+<a href="/w/kumazawa-brewing-co/10611/beer">
+180 Beers </a>
+</p><p class="ibu">
+11,024 Ratings </p>
+<div class="rating">
+<div class="caps" data-rating="3.634">
+<div class="cap cap-100"></div>
+<div class="cap cap-100"></div>
+<div class="cap cap-100"></div>
+<div class="cap cap-60"></div>
+<div class="cap"></div>
+</div> <span class="num">(3.63)</span>
+</div>
+</div>
+</div>
+</div>
+
+<a href="#" class="button yellow more_search track-click" data-track="search" data-type="brewery" data-href=":more_brewery" data-sort="all" data-query="japan">Show More</a>
+<p class="stream-loading"><span></span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sidebar">
+<div class="box">
+<div class="content">
+<h3>Global Top Beers</h3> <div class="item">
+<p class="logo">
+<a href="/b/guinness-guinness-draught/4473" class="track-click" data-track="sidebar" data-href=":beer/toplist">
+<img src="https://untappd.akamaized.net/site/beer_logos/beer-4473_1cbe8_sm.jpeg">
+</a>
+</p><p class="text">
+<a href="/b/guinness-guinness-draught/4473" class="track-click" data-track="sidebar" data-href=":beer/toplist"><span class="name">Guinness Draught</span></a>
+<span class="brewery">Guinness</span> </p>
+</div>
+<div class="item">
+<p class="logo">
+<a href="/b/brewdog-punk-ipa/5702" class="track-click" data-track="sidebar" data-href=":beer/toplist">
+<img src="https://untappd.akamaized.net/site/beer_logos/beer-5702_b5666_sm.jpeg">
+</a>
+</p><p class="text">
+<a href="/b/brewdog-punk-ipa/5702" class="track-click" data-track="sidebar" data-href=":beer/toplist"><span class="name">Punk IPA</span></a>
+<span class="brewery">BrewDog</span> </p>
+</div>
+<div class="item">
+<p class="logo">
+<a href="/b/boston-beer-company-samuel-adams-octoberfest/3942" class="track-click" data-track="sidebar" data-href=":beer/toplist">
+<img src="https://untappd.akamaized.net/site/beer_logos/beer-3942_8134d_sm.jpeg">
+</a>
+</p><p class="text">
+<a href="/b/boston-beer-company-samuel-adams-octoberfest/3942" class="track-click" data-track="sidebar" data-href=":beer/toplist"><span class="name">Samuel Adams OctoberFest</span></a>
+<span class="brewery">Boston Beer Company</span> </p>
+</div>
+<div class="item">
+<p class="logo">
+<a href="/b/heineken-heineken/5860" class="track-click" data-track="sidebar" data-href=":beer/toplist">
+<img src="https://untappd.akamaized.net/site/beer_logos/beer-5860_a68ef_sm.jpeg">
+</a>
+</p><p class="text">
+<a href="/b/heineken-heineken/5860" class="track-click" data-track="sidebar" data-href=":beer/toplist"><span class="name">Heineken</span></a>
+<span class="brewery">Heineken</span> </p>
+</div>
+<div class="item">
+<p class="logo">
+<a href="/b/stigbergets-bryggeri-triple-dry-hopped-amaaazing-haze/3907757" class="track-click" data-track="sidebar" data-href=":beer/toplist">
+<img src="https://untappd.akamaized.net/site/beer_logos/beer-3907757_34093_sm.jpeg">
+</a>
+</p><p class="text">
+<a href="/b/stigbergets-bryggeri-triple-dry-hopped-amaaazing-haze/3907757" class="track-click" data-track="sidebar" data-href=":beer/toplist"><span class="name">Triple Dry Hopped Amaaazing Haze</span></a>
+<span class="brewery">Stigbergets Bryggeri</span> </p>
+</div>
+<div class="item">
+<p class="logo">
+<a href="/b/lagunitas-brewing-company-ipa/4509" class="track-click" data-track="sidebar" data-href=":beer/toplist">
+<img src="https://untappd.akamaized.net/site/beer_logos/beer-4509_1ce65_sm.jpeg">
+</a>
+</p><p class="text">
+<a href="/b/lagunitas-brewing-company-ipa/4509" class="track-click" data-track="sidebar" data-href=":beer/toplist"><span class="name">IPA</span></a>
+<span class="brewery">Lagunitas Brewing Company</span> </p>
+</div>
+<div class="item">
+<p class="logo">
+<a href="/b/brouwerij-bosteels-tripel-karmeliet/6511" class="track-click" data-track="sidebar" data-href=":beer/toplist">
+<img src="https://untappd.akamaized.net/site/beer_logos/beer-6511_10d60_sm.jpeg">
+</a>
+</p><p class="text">
+<a href="/b/brouwerij-bosteels-tripel-karmeliet/6511" class="track-click" data-track="sidebar" data-href=":beer/toplist"><span class="name">Tripel Karmeliet</span></a>
+<span class="brewery">Brouwerij Bosteels</span> </p>
+</div>
+<div class="item">
+<p class="logo">
+<a href="/b/brewdog-elvis-juice/1441008" class="track-click" data-track="sidebar" data-href=":beer/toplist">
+<img src="https://untappd.akamaized.net/site/beer_logos/beer-1441008_09017_sm.jpeg">
+</a>
+</p><p class="text">
+<a href="/b/brewdog-elvis-juice/1441008" class="track-click" data-track="sidebar" data-href=":beer/toplist"><span class="name">Elvis Juice</span></a>
+<span class="brewery">BrewDog</span> </p>
+</div>
+<div class="item">
+<p class="logo">
+<a href="/b/grupo-modelo-corona-extra/5848" class="track-click" data-track="sidebar" data-href=":beer/toplist">
+<img src="https://untappd.akamaized.net/site/beer_logos/beer-5848_e34c0_sm.jpeg">
+</a>
+</p><p class="text">
+<a href="/b/grupo-modelo-corona-extra/5848" class="track-click" data-track="sidebar" data-href=":beer/toplist"><span class="name">Corona Extra</span></a>
+<span class="brewery">Grupo Modelo</span> </p>
+</div>
+<div class="item">
+<p class="logo">
+<a href="/b/birra-moretti-birra-moretti-l-autentica/6347" class="track-click" data-track="sidebar" data-href=":beer/toplist">
+<img src="https://untappd.akamaized.net/site/beer_logos/beer-6347_a13ce_sm.jpeg">
+</a>
+</p><p class="text">
+<a href="/b/birra-moretti-birra-moretti-l-autentica/6347" class="track-click" data-track="sidebar" data-href=":beer/toplist"><span class="name">Birra Moretti L'Autentica</span></a>
+<span class="brewery">Birra Moretti</span> </p>
+</div>
+</div>
+</div>
+<div class="box">
+<div class="content">
+<h3>Trending Locations</h3> <div class="item">
+<p class="logo">
+ <span>Verified</span> <a href="/v/untappd-at-home/9917985" class="track-click" data-track="sidebar" data-href=":venue/toplist"><img src="https://untappd.akamaized.net/venuelogos/venue_9917985_b3a5d245_bg_176.png?v=1"></a>
+</p><p class="text">
+<a href="/v/untappd-at-home/9917985" class="track-click" data-track="sidebar" data-href=":venue/toplist"><span class="name">Untappd at Home</span></a>
+<span class="location">United States</span> </p>
+</div>
+<div class="item">
+<p class="logo">
+<span>Verified</span> <a href="/v/station-linne/8758336" class="track-click" data-track="sidebar" data-href=":venue/toplist"><img src="https://untappd.akamaized.net/venuelogos/venue_8758336_80bbe19f_bg_176.png?v=1"></a>
+</p><p class="text">
+<a href="/v/station-linne/8758336" class="track-click" data-track="sidebar" data-href=":venue/toplist"><span class="name">Station Linné</span></a>
+<span class="location">Gothenburg, Västra Götalands län </span> </p>
+</div>
+<div class="item">
+<p class="logo">
+<span>Verified</span> <a href="/v/beerlovers-bar/4945387" class="track-click" data-track="sidebar" data-href=":venue/toplist"><img src="https://untappd.akamaized.net/venuelogos/venue_4945387_efea287a_bg_176.png?v=1"></a>
+</p><p class="text">
+<a href="/v/beerlovers-bar/4945387" class="track-click" data-track="sidebar" data-href=":venue/toplist"><span class="name">Beerlovers Bar</span></a>
+<span class="location">Antwerpen, Antwerpen </span> </p>
+</div>
+<div class="item">
+<p class="logo">
+<span>Verified</span> <a href="/v/burial-beer-co/799137" class="track-click" data-track="sidebar" data-href=":venue/toplist"><img src="https://untappd.akamaized.net/venuelogos/venue_799137_04fbce8a_bg_176.png?v=1"></a>
+</p><p class="text">
+<a href="/v/burial-beer-co/799137" class="track-click" data-track="sidebar" data-href=":venue/toplist"><span class="name">Burial Beer Co.</span></a>
+<span class="location">Asheville, NC </span> </p>
+</div>
+<div class="item">
+<p class="logo">
+<span>Verified</span> <a href="/v/billies-bier-kafetaria/1333310" class="track-click" data-track="sidebar" data-href=":venue/toplist"><img src="https://untappd.akamaized.net/venuelogos/venue_1333310_4706530a_bg_176.png?v=1"></a>
+</p><p class="text">
+<a href="/v/billies-bier-kafetaria/1333310" class="track-click" data-track="sidebar" data-href=":venue/toplist"><span class="name">Billie's Bier Kafétaria</span></a>
+<span class="location">Antwerpen, Antwerpen </span> </p>
+</div>
+<div class="item">
+<p class="logo">
+<span>Verified</span> <a href="/v/share-house/7728362" class="track-click" data-track="sidebar" data-href=":venue/toplist"><img src="https://untappd.akamaized.net/venuelogos/venue_7728362_40546b69_bg_176.png?v=1"></a>
+</p><p class="text">
+<a href="/v/share-house/7728362" class="track-click" data-track="sidebar" data-href=":venue/toplist"><span class="name">Share House</span></a>
+<span class="location">Moskva, Москва </span> </p>
+</div>
+<div class="item">
+<p class="logo">
+<span>Verified</span> <a href="/v/messorem-bracitorium/8649598" class="track-click" data-track="sidebar" data-href=":venue/toplist"><img src="https://untappd.akamaized.net/venuelogos/venue_8649598_a87c9ebc_bg_176.png?v=1"></a>
+</p><p class="text">
+<a href="/v/messorem-bracitorium/8649598" class="track-click" data-track="sidebar" data-href=":venue/toplist"><span class="name">Messorem Bracitorium</span></a>
+<span class="location">Montréal, QC </span> </p>
+</div>
+<div class="item">
+<p class="logo">
+<span>Verified</span> <a href="/v/mikerphone-brewing/6016794" class="track-click" data-track="sidebar" data-href=":venue/toplist"><img src="https://untappd.akamaized.net/venuelogos/venue_6016794_a82402e9_bg_176.png?v=1"></a>
+</p><p class="text">
+<a href="/v/mikerphone-brewing/6016794" class="track-click" data-track="sidebar" data-href=":venue/toplist"><span class="name">Mikerphone Brewing</span></a>
+<span class="location">Elk Grove Village, IL </span> </p>
+</div>
+<div class="item">
+<p class="logo">
+<span>Verified</span> <a href="/v/dockside-brewery/9758003" class="track-click" data-track="sidebar" data-href=":venue/toplist"><img src="https://untappd.akamaized.net/venuelogos/venue_9758003_8c39ba1c_bg_176.png?v=1"></a>
+</p><p class="text">
+<a href="/v/dockside-brewery/9758003" class="track-click" data-track="sidebar" data-href=":venue/toplist"><span class="name">Dockside Brewery</span></a>
+<span class="location">Milford, CT </span> </p>
+</div>
+<div class="item">
+<p class="logo">
+<a href="/v/de-gouverneur/1826909" class="track-click" data-track="sidebar" data-href=":venue/toplist"><img src="https://ss3.4sqi.net/img/categories_v2/nightlife/pub_bg_512.png"></a>
+</p><p class="text">
+<a href="/v/de-gouverneur/1826909" class="track-click" data-track="sidebar" data-href=":venue/toplist"><span class="name">De Gouverneur</span></a>
+<span class="location">Maastricht, Limburg </span> </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" language="Javascript" src="https://untappd.akamaized.net/assets/v3/js/search.js?v=2.7.3"></script>
+<style type="text/css" media="screen">
+			.link-it {
+				color: #fff;
+				text-decoration: underline;
+				font-weight: 800;
+			}
+
+			.link-it:hover {
+				color: #fff;
+				font-weight: 800;
+			}
+
+			.main-banner {
+				float: left;
+	    		text-align: left;
+	    		width: 80%;
+			}
+
+			.action-btn {
+				float: right;
+	    		text-align: right;
+	    		display: block;
+	    		margin-right: 12px;
+	    		margin-top: 7px;
+			}
+		</style>
+<div class="announcement announcementPolicy tos-banner" data-banner="true">
+<div class="announcementInner">Our <a class="link-it" href="/cookie">Cookie Policy</a>, <a class="link-it" href="/terms">Terms of Service</a>, and <a class="link-it" href="/privacy">Privacy Policy</a> have been updated. By continuing to browse our site you agree to these updates. For additonal information or feedback, visit <a class="link-it" href="https://help.untappd.com">help.untappd.com</a></div>
+<a href="javascript:void(0);" onclick="Notice.hide();" class="track-click link-it" style="text-decoration: none;" data-track="header" data-href=":/priavcy">I AGREE</a></p>
+<div style="clear: both;"></div>
+</div>
+<script>
+		var Notice = {
+			hide: function(a){
+
+				$(".tos-banner").slideUp();
+
+				$.ajax({
+					url: "/account/hide_notice?messageId=4",
+					type: "GET",
+					dataType: "json",
+				    error: function(html)
+					{
+
+					},
+					success: function(html)
+					{
+
+					}
+				});
+
+				return false;
+			}
+		}
+		</script>
+<footer>
+<div class="footer-nav">
+<div class="footer-inner">
+<ul>
+<li>
+<a class="track-click" data-track="footer" data-href=":footer/businesses" href="https://untappd.com/business">Untappd for Business</a>
+</li>
+<li>
+<a class="track-click" data-track="footer" data-href=":footer/breweries" href="https://untappd.com/breweries">Breweries</a>
+</li>
+<li>
+<a class="track-click" data-track="footer" data-href=":footer/store" href="https://store.untappd.com/">Store</a>
+</li>
+<li>
+<a class="track-click" data-track="footer" data-href=":footer/support" href="http://help.untappd.com/">Support</a>
+</li>
+<li>
+<a class="track-click" data-track="footer" data-href=":footer/blogV2" href="/blog">Blog</a>
+</li>
+<li>
+<a class="track-click" data-track="footer" data-href=":footer/badgevote" href="https://untappd.com/uservote/badges">Badge Voting</a>
+</li>
+<li>
+<a class="track-click" data-track="footer" data-href=":footer/careers" href="/careers">Careers</a>
+</li>
+<li>
+<a class="track-click" data-track="footer" data-href=":footer/api" href="/api/">API</a>
+</li>
+<li>
+<a class="track-click" data-track="footer" data-href=":footer/terms" href="/terms">Terms</a>
+</li>
+<li>
+<a class="track-click" data-track="footer" data-href=":footer/privacy" href="/privacy">Privacy</a>
+</li>
+<li>
+<a class="track-click" data-track="footer" data-href=":footer/cookie" href="/cookie">Cookie Policy</a>
+</li>
+<li>
+<a class="track-click" data-track="footer" data-href=":footer/ccpa" href="/privacy/ccpa-notice">CCPA Notice</a>
+</li>
+<li>
+<a class="track-click" data-track="footer" data-href=":footer/personal_data" href="/privacy/personal-data">Do Not Sell My Personal Information</a>
+</li>
+</ul>
+</div>
+</div>
+<ul class="social">
+<li><a class="track-click" data-track="footer" data-href=":footer/social/twitter" href="https://twitter.com/untappd" target="_blank"><img src="https://untappd.akamaized.net/assets/custom/homepage/images/icon-twitter.svg" alt="Icon twitter" /></a></li>
+<li><a class="track-click" data-track="footer" data-href=":footer/social/facebook" href="https://www.facebook.com/untappd/" target="_blank"><img src="https://untappd.akamaized.net/assets/custom/homepage/images/icon-facebook.svg" alt="Icon facebook" /></a></li>
+<li><a class="track-click" data-track="home" data-href=":footer/social/instagram" href="https://www.instagram.com/untappd/" target="_blank"><img src="https://untappd.akamaized.net/assets/custom/homepage/images/icon-instagram.svg" alt="Icon instagram" /></a></li>
+</ul>
+</footer>
+<script type="text/javascript">
+	// polyfill for ie11
+	function getUrlParameter(name) {
+		name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+		var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+		var results = regex.exec(location.search);
+		return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+	};
+
+	$(document).ready(function() {
+		// remove any access tokens, perseve other elements
+		if (history.replaceState) {
+			if (location.href.indexOf("access_token=") >= 0) {
+				const accessTokenURL = getUrlParameter("access_token");
+				let currentURL = location.href;
+				let finalURL = currentURL.replace(`access_token=${accessTokenURL}`, '');
+
+				// if the url has a "&" already in it, then remove the "?" and replace the first "&" with an "?"
+				if (finalURL.indexOf("&") >= 0) {
+					finalURL = finalURL.replace("?", "").replace("&", "?");
+				} else {
+					finalURL = finalURL.split("?")[0];
+				}
+
+				history.replaceState(null, "", finalURL);
+			}
+		}
+	})
+</script>
+<script type="text/javascript">
+	// Clear Text Feild
+	function clearText(thefield) {
+		if (thefield.defaultValue == thefield.value)
+			thefield.value = ""
+	}
+
+
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-11061050-10']);
+
+	_gaq.push(['_set', 'displayFeatures', true]);
+
+	_gaq.push(['_setCustomVar',
+		1, // This custom var is set to slot #1.  Required parameter.
+		'User Type', // The name of the custom variable.  Required parameter.
+		'Member', // Sets the value of "User Type" to "Member" or "Visitor" depending on status.  Required parameter.
+		2 // Sets the scope to session-level.  Optional parameter.
+	]);
+
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+
+	</script>
+<script type="text/javascript">
+	(function(i, s, o, g, r, a, m) {
+		i['SLScoutObject'] = r;
+		i[r] = i[r] || function() {
+			(i[r].q = i[r].q || []).push(arguments)
+		}, i[r].l = 1 * new Date();
+		a = s.createElement(o),
+			m = s.getElementsByTagName(o)[0];
+		a.async = 1;
+		a.src = g;
+		m.parentNode.insertBefore(a, m)
+	})(window, document, 'script', 'https://scout-cdn.salesloft.com/sl.js', 'slscout');
+	slscout(["init", "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0IjoxMDEyOTV9.kyvVxzaXkHFioFsbKvRyKkXkv6AyP-mnE5iJJdlsMsU"]);
+</script>
+</body>
+</html>
