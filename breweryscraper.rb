@@ -2,6 +2,7 @@
 
 require 'nokogiri'
 require 'json'
+require 'httparty'
 require 'pry-byebug'
 
 def brewer_html_to_hash(html_file_location)
