@@ -3,7 +3,9 @@
 require 'nokogiri'
 require 'json'
 require 'httparty'
+require 'open-uri'
 require 'pry-byebug'
+require 'nordvpn-api'
 
 def brewer_html_to_hash(html_file_location)
   results_hash = {}
@@ -25,19 +27,32 @@ def process_brewers_json(json_file_path)
   file = File.open(json_file_path)
   json_data = JSON.load(file)
   cleaned_hash = {}
+  puts 'Processing URLs'
   json_data.each do |json_pair|
-    if json_pair.last.split('/').last == 'beer'
-      cleaned_hash[json_pair.first] == json_pair.last
-    else
-      get_real_url(json_pair)
-    end
+    cleaned_hash[json_pair.first] = if json_pair.last.split('/').last == 'beer'
+                                      json_pair.last
+                                    else
+                                      get_real_url(json_pair.last)
+                                    end
   end
-  cleaned_hash
+  hash_to_json(cleaned_hash, 'cleaned_json')
 end
 
-def get_real_url(url_and_index_array)
-  index = url_and_index_array.first
-  url = url_and_index_array.last
+
+# TODO, add NORDVPN switching every 100 requests.
+# Save progress half way through, allow for resume
+def get_real_url(url)
+  begin
+    puts "Getting real URL for: #{url}"
+    doc = Nokogiri::HTML(open(url))
+  rescue OpenURI::HTTPError
+    puts 'Too many requests, waiting 2 min then retrying...'
+    sleep(120)
+    doc = Nokogiri::HTML(open(url))
+  end
+  real_url = 'https://untappd.com' + doc.search('.details').search('a').first['href']
+  puts "Real URL is: #{real_url}"
+  real_url
 end
 
 process_brewers_json('brewers.json')
